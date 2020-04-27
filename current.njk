@@ -49,15 +49,15 @@
         {% endif %}
     </div>
 		<div class="dimmed small">
-			<span class="wi wi-thermometer-exterior"></span>
+			<span class="wi weathericon wi-thermometer-exterior"></span>
 			<span class="dimmed">
 				{{ current.minTemperature| roundValue | unit("temperature") | decimalSymbol }}
 			</span>
 			<span class="dimmed" allign right>
 				{{ current.maxTemperature| roundValue | unit("temperature") | decimalSymbol }}
 			</span>
-			<span class="wi wi-thermometer"></span>
-			<span class="wi wi-umbrella" "dimmed"></span><span class = "dimmed">
+			<span class="wi weathericon wi-thermometer"></span>
+			<span class="wi weathericon wi-umbrella" "dimmed"></span><span class = "dimmed">
 				{{current.rainChance }}%
 			</span>
 		</div>
@@ -68,6 +68,9 @@
 		</div>
 		<div class="dimmed small">
 			{{ current.humanRead }}
+		</div>
+		<div class="thin xsmall xsmall">
+			{{ current.tijdstip }}
 		</div>
 {% else %}
     <div class="dimmed light small">

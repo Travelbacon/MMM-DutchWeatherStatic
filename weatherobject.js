@@ -35,10 +35,11 @@ class WeatherObject {
 		this.feelsLikeTemp = null;
 		this.rainChance = null;
 		this.humanRead = null;
+		this.tijdstip = null;
 	}
 
 	nextSunAction() {
-			return moment().isBetween(moment(this.sunrise, 'hh:mmm'), moment(this.sunset, 'hh:mm')) ? "sunset": "sunrise";
+			return moment().isBetween(moment(this.sunrise, 'HH:mmm'), moment(this.sunset, 'HH:mm')) ? "sunset": "sunrise";
 	}
 
 }
