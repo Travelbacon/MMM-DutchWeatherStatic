@@ -17,18 +17,14 @@ WeatherProvider.register("weerlivenl", {
 
 	// Overwrite the fetchCurrentWeather method.
 	fetchCurrentWeather() {
-		Log.info("Retrieve from API WNL");
-		Log.info(this.getUrl());
 		this.fetchData(this.getUrl())
 			.then(data => {
 				if (!data) {
 					// Did not receive usable new data.
 					// Maybe this needs a better check?
-					Log.info('No data');
+					Log.error('No data');
 					return;
 				}
-				Log.info('******************');
-				Log.info(data.liveweer[0].plaats);
 				this.setFetchedLocation(`${data.liveweer[0].plaats}, Netherlands`);
 				const currentWeather = this.generateWeatherObjectFromCurrentWeather(data.liveweer[0]);
 				this.setCurrentWeather(currentWeather);

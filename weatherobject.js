@@ -38,7 +38,7 @@ class WeatherObject {
 	}
 
 	nextSunAction() {
-		return moment().isBetween(this.sunrise, this.sunset) ? "sunset" : "sunrise";
+			return moment().isBetween(moment(this.sunrise, 'hh:mmm'), moment(this.sunset, 'hh:mm')) ? "sunset": "sunrise";
 	}
 
 }
