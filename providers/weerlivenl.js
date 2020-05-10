@@ -66,6 +66,8 @@ WeatherProvider.register("weerlivenl", {
 		currentWeather.weatherType = this.convertWeatherType(currentWeatherData.d0weer);
 		
 		currentWeather.tijdstip = moment().format('HH:mm');
+		
+		currentWeather.weatherWarning = currentWeatherData.alarm;
 		return currentWeather;
 	},
 	
