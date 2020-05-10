@@ -26,7 +26,7 @@
     {% endif %}
     <div class="large light">
         {% if current.weatherWarning === "1" %}
-						<img src="modules/MMM-DutchWeatherStatic/icons/warning.png"
+						<img src="modules/{{name}}/icons/warning.png"
 									width = "65" height = "65">
         {% endif %}
         <span class="wi weathericon wi-{{current.weatherType}}"></span>

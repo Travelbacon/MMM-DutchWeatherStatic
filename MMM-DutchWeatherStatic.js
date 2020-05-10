@@ -136,6 +136,7 @@ Module.register("MMM-DutchWeatherStatic",{
 	// Add all the data to the template.
 	getTemplateData: function () {
 		return {
+			name: this.name,
 			config: this.config,
 			current: this.weatherProvider.currentWeather(),
 			indoor: {
