@@ -45,7 +45,7 @@ Module.register("MMM-DutchWeatherStatic",{
 		apiVersion: "2.5",
 		//apiBase: "https://api.openweathermap.org/data/",
 		//weatherEndpoint: "/weather",
-		apiBase: "http://weerlive.nl/api/json-data-10min.php",
+		apiBase: "https://weerlive.nl/api/json-data-10min.php",
 		
 
 		appendLocationNameToHeader: true,
